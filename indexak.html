@@ -47,8 +47,8 @@ var x = d3.scaleLinear()
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
-    .domain(d3.range(-50, 50,10))
-    .range(d3.schemeRdBu[11]);
+    .domain(d3.range(-40, 50,10))
+    .range(d3.schemeRdBu[10]);
 
 var g = svg.append("g")
     .attr("class", "key")
