@@ -43,7 +43,7 @@ var unemployment = d3.map();
 var path = d3.geoPath();
 
 var x = d3.scaleLinear()
-    .domain([-50, 50])
+    .domain([-50,50])
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
@@ -74,7 +74,7 @@ g.append("text")
     .attr("fill", "#000")
     .attr("text-anchor", "start")
     .attr("font-weight", "bold")
-    .text("Unemployment rate");
+    .text("Cost of childcare compared to public college");
 
 g.call(d3.axisBottom(x)
     .tickSize(13)
