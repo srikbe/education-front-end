@@ -1,4 +1,4 @@
-var svg = d3.select("svg"),
+var svg = d3.select("#graduation_map"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
@@ -7,12 +7,12 @@ var graduation = d3.map();
 var path = d3.geoPath();
 
 var x = d3.scaleLinear()
-    .domain([1, 10])
+    .domain([5, 35])
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
-    .domain(d3.range(2, 10))
-    .range(d3.schemeBlues[9]);
+    .domain(d3.range(5, 35, 5))
+    .range(d3.schemeBlues[6]);
 
 var g = svg.append("g")
     .attr("class", "key")
