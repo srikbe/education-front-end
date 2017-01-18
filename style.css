@@ -1,0 +1,29 @@
+p{ 
+	color: red;
+	width: 500px;
+	border: 1px solid black;
+ }
+ li, h1 {
+ 	color: red;
+ }
+ html {
+  background-color: grey
+ ;
+}
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: black;
+  padding: 0 50px 50px 50px;
+  border: 5px solid black;
+}
+h1 {
+  margin: 0 auto;
+  padding: 20px;    
+  color: red;
+  text-shadow: 5px 5px 2px purple;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
