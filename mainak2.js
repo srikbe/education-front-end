@@ -1,18 +1,20 @@
-var svg = d3.select("#graduation_map"),
+
+
+  var svg = d3.select("#chart1"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-var graduation = d3.map();
+var unemployment = d3.map();
 
 var path = d3.geoPath();
 
 var x = d3.scaleLinear()
-    .domain([5, 35])
+    .domain([-50,50])
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
-    .domain(d3.range(5, 35, 5))
-    .range(d3.schemeBlues[6]);
+    .domain(d3.range(-40, 50,10))
+    .range(d3.schemeRdBu[10]);
 
 var g = svg.append("g")
     .attr("class", "key")
@@ -26,19 +28,37 @@ g.selectAll("rect")
       return d;
     }))
   .enter().append("rect")
-    .attr("height", 8)
+    .attr("height", 12)
     .attr("x", function(d) { return x(d[0]); })
     .attr("width", function(d) { return x(d[1]) - x(d[0]); })
     .attr("fill", function(d) { return color(d[0]); });
 
 g.append("text")
     .attr("class", "caption")
-    .attr("x", x.range()[0])
+    .attr("x", 600)
     .attr("y", -6)
     .attr("fill", "#000")
-    .attr("text-anchor", "start")
+    .attr("text-anchor", "end")
     .attr("font-weight", "bold")
-    .text("Dropout rate");
+    .text("Childcare costs are % lower");
+
+g.append("text")
+    .attr("class", "caption")
+    .attr("x", 730)
+    .attr("y", -6)
+    .attr("fill", "#000")
+    .attr("text-anchor", "end")
+    .attr("font-weight", "bold")
+    .text("Costs are equal");
+
+    g.append("text")
+    .attr("class", "caption")
+    .attr("x", 870)
+    .attr("y", -6)
+    .attr("fill", "#000")
+    .attr("text-anchor", "end")
+    .attr("font-weight", "bold")
+    .text("Childcare costs are % higher");
 
 g.call(d3.axisBottom(x)
     .tickSize(13)
@@ -49,18 +69,18 @@ g.call(d3.axisBottom(x)
 
 d3.queue()
     .defer(d3.json, "https://d3js.org/us-10m.v1.json")
-    .defer(d3.tsv, "graduation.tsv", function(d) { graduation.set(d.id, +d.rate); })
+    .defer(d3.tsv, "unemployment.tsv", function(d) { unemployment.set(d.id, +d.rate); })
     .await(ready);
 
 function ready(error, us) {
   if (error) throw error;
 
   svg.append("g")
-      .attr("class", "counties")
+      .attr("class", "states")
     .selectAll("path")
-    .data(topojson.feature(us, us.objects.counties).features)
+    .data(topojson.feature(us, us.objects.states).features)
     .enter().append("path")
-      .attr("fill", function(d) { return color(d.rate = graduation.get(d.id)); })
+      .attr("fill", function(d) { return color(d.rate = unemployment.get(d.id)); })
       .attr("d", path)
     .append("title")
       .text(function(d) { return d.rate + "%"; });

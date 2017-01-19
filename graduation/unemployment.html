@@ -13,28 +13,13 @@
 }
 
 </style>
-<body>
-  <h5 class="g-hed"></h5>
-  <p class="g-intro"></p>
-  <div class="g-chart"></div>
-    <div class="legend">
-    <div class="block" id="q0-9"></div>
-    <div class="block" id="q1-9"></div>
-    <div class="block" id="q2-9"></div>
-    <div class="block" id="q3-9"></div>
-    <div class="block" id="q4-9"></div>
-  </div>
-  <div class="g-source"><span class="g-source-bold"></span><span class="g-source-reg"></span></div>
-
-  <h1> Education Project </h1>
 <svg width="960" height="600"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script>
 
-
-  var svg = d3.select("svg"),
+var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
@@ -43,12 +28,12 @@ var unemployment = d3.map();
 var path = d3.geoPath();
 
 var x = d3.scaleLinear()
-    .domain([-50,50])
+    .domain([1, 10])
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
-    .domain(d3.range(-40, 50,10))
-    .range(d3.schemeRdBu[10]);
+    .domain(d3.range(2, 10))
+    .range(d3.schemeBlues[9]);
 
 var g = svg.append("g")
     .attr("class", "key")
@@ -74,7 +59,7 @@ g.append("text")
     .attr("fill", "#000")
     .attr("text-anchor", "start")
     .attr("font-weight", "bold")
-    .text("Cost of childcare compared to public college");
+    .text("Unemployment rate");
 
 g.call(d3.axisBottom(x)
     .tickSize(13)
@@ -92,9 +77,9 @@ function ready(error, us) {
   if (error) throw error;
 
   svg.append("g")
-      .attr("class", "states")
+      .attr("class", "counties")
     .selectAll("path")
-    .data(topojson.feature(us, us.objects.states).features)
+    .data(topojson.feature(us, us.objects.counties).features)
     .enter().append("path")
       .attr("fill", function(d) { return color(d.rate = unemployment.get(d.id)); })
       .attr("d", path)
