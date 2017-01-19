@@ -1,0 +1,5 @@
+User Stories
+As a researcher, I want to understand the distribution of SIGs nationally so that I can begin to detect and track trends and standards between states in funds disbursement.
+
+As a principal,  I want to know how many other schools in my state received SIGs to get a sense of how likely it is that my school may receive a grant. 
+

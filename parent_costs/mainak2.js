@@ -1,40 +1,6 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-.counties {
-  fill: none;
-}
-
-.states {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-
-</style>
-<body>
-  <h5 class="g-hed"></h5>
-  <p class="g-intro"></p>
-  <div class="g-chart"></div>
-    <div class="legend">
-    <div class="block" id="q0-9"></div>
-    <div class="block" id="q1-9"></div>
-    <div class="block" id="q2-9"></div>
-    <div class="block" id="q3-9"></div>
-    <div class="block" id="q4-9"></div>
-  </div>
-  <div class="g-source"><span class="g-source-bold"></span><span class="g-source-reg"></span></div>
-
-  <h1> Education Project </h1>
-<svg width="960" height="600"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
-<script>
 
 
-  var svg = d3.select("svg"),
+  var svg = d3.select("#chart1"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
@@ -62,19 +28,37 @@ g.selectAll("rect")
       return d;
     }))
   .enter().append("rect")
-    .attr("height", 8)
+    .attr("height", 12)
     .attr("x", function(d) { return x(d[0]); })
     .attr("width", function(d) { return x(d[1]) - x(d[0]); })
     .attr("fill", function(d) { return color(d[0]); });
 
 g.append("text")
     .attr("class", "caption")
-    .attr("x", x.range()[0])
+    .attr("x", 600)
     .attr("y", -6)
     .attr("fill", "#000")
-    .attr("text-anchor", "start")
+    .attr("text-anchor", "end")
     .attr("font-weight", "bold")
-    .text("Cost of childcare compared to public college");
+    .text("Childcare costs are % lower");
+
+g.append("text")
+    .attr("class", "caption")
+    .attr("x", 730)
+    .attr("y", -6)
+    .attr("fill", "#000")
+    .attr("text-anchor", "end")
+    .attr("font-weight", "bold")
+    .text("Costs are equal");
+
+    g.append("text")
+    .attr("class", "caption")
+    .attr("x", 870)
+    .attr("y", -6)
+    .attr("fill", "#000")
+    .attr("text-anchor", "end")
+    .attr("font-weight", "bold")
+    .text("Childcare costs are % higher");
 
 g.call(d3.axisBottom(x)
     .tickSize(13)
@@ -106,5 +90,3 @@ function ready(error, us) {
       .attr("class", "states")
       .attr("d", path);
 }
-
-</script>
