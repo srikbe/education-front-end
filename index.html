@@ -3,24 +3,55 @@
   <head>
   <meta charset="utf-8">
   <title>Issues in Education</title>
+
+   <!-- stylesheets at the end of the head -->
   <link href="style.css" rel="stylesheet" type="text/css">
-  <!-- stylesheets at the end of the head -->
+
+
+
+   <script type="text/javascript">
+    function changeText(text)
+        {
+            var display = document.getElementById('text-display');
+            display.innerHTML = "";
+            display.innerHTML = text;
+        }
+          function changeback(text)
+        {
+            var display = document.getElementById('text-display');
+            display.innerHTML = "";
+            display.innerHTML = text;
+        }
+    </script>
+
+
 </head>
 
 <body>
   <h1> Issues in Education at the Federal and State levels</h1>
 
-  <ul class="nav">
+
+
+  <ul class="nav" id="box">
     <li><a href="education-front-end/school_improvement/sigindex.html">Federal Grants</a></li>
     <li><a href="education-front-end/graduation/graduation.html">Graduation Rates</a></li>
      <li><a href="education-front-end/parent_costs/indexak1.html">Childcare Costs</a></li>
+  </ul>
 
 
 
-  <h2>The following pages feature a few charts that highlight education spending and costs in multiple avenues.</h2>
+<div id="box" onmouseover="changeText('Contributors: Chibuzo E., Anthea K., Sri K., James P.')" onmouseout="changeback('By: DPI-691M Education Team')" >
+
+<div id="text-display" >
+By: DPI-691M Education Team
+</div>
+
+</div>
+<h2>The following pages feature a few charts that highlight education spending and costs in multiple avenues.</h2>
+<br/>
+    <!-- also putting javascript at the end of the head -->
+<link href="main.js" rel="javascript" type="text/javascript">
 
 
-  <!-- javascripts at the end of the body -->
-  <script src="main.js"></script>
-  </body>
-</html>
+    </body>
+  </html>
