@@ -1,0 +1,91 @@
+p {
+    color: black;
+    width: 500px;
+}
+
+html {
+  background-color: #6E86D6;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #D3D3D3;
+  padding: 0 20px 300px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+}
+
+h1#title {
+    color:green;
+}
+
+.quote{
+  background: #D3D3D3;
+  border-left: 10px solid #6E86D6;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  color: gray;
+
+}
+
+#mainQuote {
+    color: gray;
+    font-weight: bold;
+
+}
+
+#mainQuote:before {
+  color: #6E86D6;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+#mainQuote p {
+  display: inline;  
+}
+
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.chartdiv h2,h3,p,a {
+  color: gray;
+  margin: 0;
+  padding: 0;
+}
+
+ul.nav {
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:36px; line-height:36px;
+    background:#6E86D6; /* you can change the backgorund color here. */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    width: 577px;
+}
+ul.nav li {
+    border-right:1px solid #D3D3D3; /* you can change the border color matching to your background color */
+    float:left;
+}
+ul.nav a {
+    display:block;
+    padding:0 28px;
+    color: #D3D3D3;
+    text-decoration:none;
+}
+ul.nav a:hover,
+ul.nav li.current a {
+    background:#6E86D6;
+}
