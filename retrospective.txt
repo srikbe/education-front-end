@@ -1,0 +1,15 @@
+Retrospective
+
+Start
+1. Being more proactive about planning meetings--making sure they are on calendar. Immediately following scrum meeting, establish next meeting date/time/format. 
+2. Being more diligent with task assignment--team should be self-organizing, but 
+3. Play scrum poker when new tasks are added to Trello board during meetings
+
+Stop:
+1. Undertaking tasks without paying attention to point values to understand length of time. 
+2. Also, adjust points on card as needed if tasks are more/less challenging or time-consuming than originally expected. 
+3. Spending copious amounts of time troubleshooting/debugging on your own before Googling help topic or sharing blocker(s) with team, even if it's between a scrum meeting. 
+
+Continue: 
+1. Optimizing website so page flow on website is seamless. 
+2. Find data from the same year (or range of years) for all of the charts and compare year-to-year information.
