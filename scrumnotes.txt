@@ -1,0 +1,62 @@
+Stand Up/Scrum Meeting Notes
+---
+1/14/17
+ANTHEA
+Have done: working on data visualization (map). Waiting for Dhrumil to load eg of map. 
+Will do: upload/push map to repo
+Blocker: still need to get code to run; Dhrumil’s eg will help to troubleshoot 
+
+JAMES 
+Have done: picked data, still finalizing choices for visualization
+Will do: finish the code and pushing to the repos
+Blockers: none
+
+SRI
+Have done: started the repos; arranged order on Trello cards
+Will do: give rest of team access to repos; will develop basic organization of the webpage and .html file; will pick out data
+Blockers: 
+
+CHIBUZO
+Have done: Chose data, did some computations to figure out what to represent, selected a visualization
+Will do: Make a bubble chart
+Blockers: None 
+
+-Need to get the “story” -- how do we describe the common thread with our data
+
+DATA INFO
+ANTHEA
+Child care: Bar chart showing cost of childcare for children 0-5 vin a center to the cost of public college (state college) tuition by state
+Suggestions from team members: James: maybe show cost of child care from year to year
+
+Sri: perhaps show the growth of child care costs over time
+
+JAMES
+State average test scores in 15 states
+Per-pupil spending by state; there are breakdowns by poverty between districts
+
+CHIBUZO
+2010 School Improvement Grant information. Originally wanted to create a chart that reflected grant award $ or types of transformation models, but missing information for some key states (e.g., TX).
+
+
+
+--------------
+1/17/17
+
+CHIBUZO 
+Have done: Completed chart and pushed pages to the correct repo; put together index.html 
+Page
+Will do: User stories
+Blockers: Visualization for bubble chart is not showing up anymore on front end page or locally; need to figure out why this is happening and fix
+
+ANTHEA: 
+Has done: Created 2 charts for childcare
+Will do: Choose the visualization with the bars that more readily compares cost of childcare to public college tuition. 
+Blockers:
+
+
+SRI: 
+Have done: managing both the front and end back end repos. Pushed James’ visualization to the front end repo. Finished chart
+Will do: Continue merging pages and will put our files into individual folders so that the repo looks tidier; will update index.html file with whole-word file names
+Blockers: Tried to organize data by folders, but changes weren’t reflected on Github--will consult with Dhrumil (see #general slack channel)
+
+
