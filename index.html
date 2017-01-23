@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <title>Issues in Education</title>
+    <meta charset="utf-8">
+    <title>Issues in Education</title>
 
-   <!-- stylesheets at the end of the head -->
-  <link href="graduation.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="graduation/graduation.css" media="screen">
+    <link rel="stylesheet" href="school_improvement/schoolimprovement.css" media="screen">
+    <link rel="stylesheet" href="parent_costs/stylesak2.css" media="screen">
+    
  
 </head>
 
@@ -29,9 +32,26 @@ By: DPI-691M Education Team
 <br/>
 </div>
 <h2>The following pages feature some issues that the US education system is currently facing.</h2>
+<center><h1>High School Graduation Rates by County</h1>
 
-    <!-- also putting javascript at the end of the head -->
-  <script src="main.js" rel="javascript" type="text/javascript"></script>
+  <svg id="graduation_map" width="960" height="600"></svg>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script type="text/javascript" src="graduation/graduation.js"></script>
+
+  <p/>The dropout rate from high school varies significantly from region to region.  In the Northeast, Mid-Atlantic and Midwest, dropout rates are relatively low.  In the Rocky Mountain and Great Plains regions, dropout rates are high, but many of these high dropout rates are in counties with extremely low populations.  Across the south, however, even in states with large population, such as Florida and Texas, there are very high rates of high school dropouts.</p>
+
+    <svg id="graduation_map" viewbox="0 0 960 600"></svg>
+      <p>Chart Source: <a href="https://bl.ocks.org/mbostock/4060606">Mike Bostock</a> </p>
+        <p>Data Source: <a href="https://nces.ed.gov/ccd/drpcompstatelvl.asp">Common Core of Data</a></p>
+        </center>
+        </div>
+
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+      <script src="https://d3js.org/topojson.v2.min.js"></script>
+      <script type="text/javascript" src="graduation/graduation.js"></script>
 
 
     </body>

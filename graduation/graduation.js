@@ -8,7 +8,7 @@ var path = d3.geoPath();
 
 var x = d3.scaleLinear()
     .domain([5, 35])
-    .rangeRound([600, 860]);
+    .rangeRound([400, 580]);
 
 var color = d3.scaleThreshold()
     .domain(d3.range(5, 35, 5))
@@ -49,7 +49,7 @@ g.call(d3.axisBottom(x)
 
 d3.queue()
     .defer(d3.json, "https://d3js.org/us-10m.v1.json")
-    .defer(d3.tsv, "graduation.tsv", function(d) { graduation.set(d.id, +d.rate); })
+    .defer(d3.tsv, "graduation/graduation.tsv", function(d) { graduation.set(d.id, +d.rate); })
     .await(ready);
 
 function ready(error, us) {
